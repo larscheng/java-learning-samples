@@ -11,12 +11,12 @@ import java.util.function.Supplier;
 /***
  * https://www.bilibili.com/video/BV184411x7XA?p=7
  * JDK内置四大基础函数式接口
- * {@link Consumer}    void accept(T t);    消费型接口，接受一个参数，无返回
- * {@link Supplier}    T get();             供给型接口，无参数，但有返回值
- * {@link Function}    R apply(T t);        函数型接口，接收参数T,返回一个R
- * {@link Predicate}   boolean test(T t);   断定型接口，接收参数T，判断其是否满足某一约束，返回一个boolean值
+ * {@link Consumer#accept(Object)}    void accept(T t);    消费型接口，接受一个参数，无返回
+ * {@link Supplier#get()}             T get();             供给型接口，无参数，但有返回值
+ * {@link Function#apply(Object)}     R apply(T t);        函数型接口，接收参数T,返回一个R
+ * {@link Predicate#test(Object)}     boolean test(T t);   断定型接口，接收参数T，判断其是否满足某一约束，返回一个boolean值
  */
-public class JdkBaseFunctionInterface {
+public class Part01JdkBaseFunctionInterface {
 
     @Test
     public void test1() {

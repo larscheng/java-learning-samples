@@ -13,5 +13,5 @@ import java.util.function.*;
  * {@link Function}    R apply(T t);        函数型接口，接收参数T,返回一个R
  * {@link Predicate}   boolean test(T t);   断定型接口，接收参数T，判断其是否满足某一约束，返回一个boolean值
  */
-public class JdkExtendFunctionInterface {
+public class part02JdkExtendFunctionInterface {
 }
