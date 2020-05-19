@@ -23,7 +23,7 @@ import java.util.stream.Stream;
  * 一旦终止操作，就执行中间操作链，并产生结果。【延时执行，终止操作触发执行】
  *
  */
-public class Part01StreamCreateTest {
+public class Part01StreamCreate {
 
 
 
@@ -83,7 +83,7 @@ public class Part01StreamCreateTest {
     @Test
     public void test4(){
         //创建前10个偶数
-        Stream.iterate(1,t->t+2).limit(10).forEach(System.out::println);
+        Stream.iterate(0,t->t+2).limit(10).forEach(System.out::println);
     }
 
     //Stream.generate() 生成创建

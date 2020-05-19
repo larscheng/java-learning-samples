@@ -16,7 +16,7 @@ import java.util.stream.Stream;
  * 2、映射  map、mapToDouble、mapToInt、mapToLong、flatMap
  * 3、排序 sorted()、sorted(Comparator c)
  */
-public class Part02StreamMethod {
+public class Part02StreamMiddle {
     /******1、筛选与切片******/
     @Test
     public void test1() {
@@ -30,7 +30,7 @@ public class Part02StreamMethod {
         list.stream().limit(4).forEach(System.out::println);
         System.out.println();
         //skip 跳过元素，从stream中跳过指定个数后获取stream
-        list.stream().skip(3).forEach(System.out::println);
+        list.stream().skip(2).limit(1).forEach(System.out::println);
         /*跳过的个数超过stream中元素个数，返回空流*/
         System.out.println("begin skip(30)");
         list.stream().skip(30).forEach(System.out::println);
@@ -76,14 +76,16 @@ public class Part02StreamMethod {
          *              | |
          *          a,a,b,b,c,c,d,d         flatMap()  Stream<String>    每个元素都产生了一个流，把这些新产生的流连接成一个同类型的流
          */
-        Stream<Stream<String>> mapLimit = list.stream().map(Part02StreamMethod::myTest).limit(6);
+        Stream<Stream<String>> mapLimit = list.stream().map(Part02StreamMiddle::myTest).limit(6);
         mapLimit.forEach(s->{
             s.forEach(System.out::println);
         });
         System.out.println();
-        Stream<String> flatMapLimit = list.stream().flatMap(Part02StreamMethod::myTest).limit(6);
+        Stream<String> flatMapLimit = list.stream().flatMap(Part02StreamMiddle::myTest).limit(6);
         flatMapLimit.forEach(System.out::println);
+
     }
+
 
     /**
      * 把每一个学生对象的姓名和工资转成 一个stream
@@ -101,7 +103,7 @@ public class Part02StreamMethod {
     @Test
     public void test3(){
         //sorted() 自然排序
-        IntStream sorted = Arrays.stream(new int[]{1, 20, 3, 5, 4, 99, 22, 11}).sorted();
+        IntStream sorted = Arrays.stream(new int[]{1, 20, 3, 99,11}).sorted();
         sorted.forEach(System.out::println);
         System.out.println();
         //sorted(Comparator)
