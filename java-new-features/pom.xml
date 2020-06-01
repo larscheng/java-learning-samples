@@ -12,6 +12,7 @@
     <artifactId>java-new-features</artifactId>
     <modules>
         <module>java8-lambda-samples</module>
+        <module>java8-timeutils-samples</module>
     </modules>
 
 
