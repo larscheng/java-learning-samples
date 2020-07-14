@@ -1,17 +1,19 @@
-package com.larscheng.www.part01LocalDateTime;
+package com.larscheng.www.part01localdatetime;
 
-import lombok.Data;
 import lombok.SneakyThrows;
 import org.junit.Test;
 
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAccessor;
-import java.time.temporal.TemporalAdjuster;
 import java.time.temporal.TemporalAdjusters;
 import java.util.Set;
 
 public class TestLocalDateTime {
+
+
+
+
 
     @Test
     public void LocalDateTimeTest(){
@@ -138,5 +140,28 @@ public class TestLocalDateTime {
         System.out.println(now);
         ZonedDateTime zonedDateTime = LocalDateTime.now().atZone(ZoneId.of("Africa/Nairobi"));
         System.out.println(zonedDateTime);
+    }
+
+
+    @Test
+    public void trans() {
+        LocalDate localDate = LocalDate.of(2020,1,1);
+        LocalTime localTime = LocalTime.now();
+        LocalDateTime localDateTime = LocalDateTime.now();
+
+        LocalDate ldt2ld = localDateTime.toLocalDate();
+        LocalTime ldt2lt = localDateTime.toLocalTime();
+        //localDateTime--->LocalDate
+        System.out.println(localDateTime+"---> localDateTime.toLocalDate() --->"+ldt2ld);
+        //localDateTime--->LocalTime
+        System.out.println(localDateTime+"---> localDateTime.toLocalTime() --->"+ldt2lt);
+
+        LocalDateTime atDate = localTime.atDate(localDate);
+        LocalDateTime atTime = localDate.atTime(localTime);
+        LocalDateTime dateTime = LocalDateTime.of(localDate, localTime);
+        //localDate+localTime--->LocalDateTime
+        System.out.println("["+localDate+" + "+localTime+"] localDate.atTime(localTime) --->"+atTime);
+        System.out.println("["+localDate+" + "+localTime+"] localTime.atDate(localDate) --->"+atDate);
+        System.out.println("["+localDate+" + "+localTime+"] LocalDateTime.of(localDate, localTime) --->"+dateTime);
     }
 }
