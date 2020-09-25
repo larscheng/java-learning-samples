@@ -13,6 +13,8 @@
         <module>java-sort-samples</module>
         <module>java-design-patterns</module>
         <module>java-new-features</module>
+        <module>java-hashmap-samples</module>
+        <module>java-netty-samples</module>
     </modules>
 
     <dependencies>
