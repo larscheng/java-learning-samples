@@ -1,7 +1,8 @@
 package singleton;
 
 /**
- *
+ * 饿汉式-静态代码块
+ * 会造成内存浪费
  * @author larsCheng
  */
 public class SingletonType02 {
