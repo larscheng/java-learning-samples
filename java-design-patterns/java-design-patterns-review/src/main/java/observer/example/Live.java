@@ -1,7 +1,4 @@
-package behavioralmodel.observermode.example;
-
-import java.util.ArrayList;
-import java.util.List;
+package observer.example;
 
 /**
  * 描述:

@@ -1,4 +1,4 @@
-package behavioralmodel.observermode.example;
+package observer.example;
 
 /**
  * 描述:
@@ -6,7 +6,7 @@ package behavioralmodel.observermode.example;
  * @author lars
  * @date 2019/7/16 16:31
  */
-public class WangWu implements Fans {
+public class Lisi implements Fans {
     @Override
     public void openApp() {
         System.out.println("粉丝"+getClass().getSimpleName()+"-----收到通知，打开app，进入直播间");

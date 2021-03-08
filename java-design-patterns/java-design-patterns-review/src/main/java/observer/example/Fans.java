@@ -1,4 +1,4 @@
-package behavioralmodel.observermode.example;
+package observer.example;
 
 /**
  * 描述:

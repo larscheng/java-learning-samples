@@ -1,4 +1,4 @@
-package behavioralmodel.observermode.example;
+package observer.example;
 
 import java.util.ArrayList;
 import java.util.List;
